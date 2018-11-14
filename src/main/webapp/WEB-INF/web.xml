@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Autoryzacja</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  	<filter>
+		<filter-name>GrantPremiumFilter</filter-name>
+		<filter-class>Filters.GrantPremiumFilter</filter-class>
+	</filter>
+    <filter>
+		<filter-name>ListFilter</filter-name>
+		<filter-class>Filters.ListFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>Filters.LoginFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>PremiumFilter</filter-name>
+		<filter-class>Filters.PremiumFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>ProfileFilter</filter-name>
+		<filter-class>Filters.ProfileFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>RegisterFilter</filter-name>
+		<filter-class>Filters.RegisterFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ListFilter</filter-name>
+		<url-pattern>/lista.jsp</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>GrantPremiumFilter</filter-name>
+		<url-pattern>/nadawanie.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/login.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>PremiumFilter</filter-name>
+		<url-pattern>/podstronapremium.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ProfileFilter</filter-name>
+		<url-pattern>/profil.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>RegisterFilter</filter-name>
+		<url-pattern>/rejestracja.jsp</url-pattern>
+	</filter-mapping>
+	
+</web-app>
